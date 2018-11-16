@@ -18,7 +18,19 @@ class BinarySearchTree:
     search(self)
 
   def breadth_first_for_each(self, cb):
-    pass
+    def search(self):
+      if self.left is not None:
+        cb(self.left.value)
+      if self.right is not None:
+        cb(self.right.value)
+      if self.left is not None:
+        search(self.left)
+      if self.right is not None:
+        search(self.right)
+
+    cb(self.value)
+    search(self)
+
 
   def insert(self, value):
     new_tree = BinarySearchTree(value)
