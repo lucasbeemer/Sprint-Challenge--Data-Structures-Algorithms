@@ -1,10 +1,15 @@
 def heapsort(arr):
-  data_heap = Heap()
-  data_arr = []
+  data_heap = Heap() # empty heap
+  data_arr = [] # empty list for data
+
+   # loop over given data-list(arr) and insert each piece(i) into data_heap
   for i in arr:
     data_heap.insert(i)
+
+  # use insert method to add values into heap storage
   for each in range(len(data_heap.storage)):
     data_arr.insert(0, data_heap.delete())
+  # return the arr of data
   return data_arr
  
 
